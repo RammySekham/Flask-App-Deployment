@@ -3,9 +3,6 @@
 # not particularly care what OS runs underneath
 FROM python:3.8.6
 
-# Set an environment variable with the directory
-# where we'll be running the app
-
 # Create the directory and instruct Docker to operate
 # from there from now on
 RUN mkdir /app
