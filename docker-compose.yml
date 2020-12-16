@@ -2,10 +2,10 @@
 version: '3'
 services:
   flask:
-    ports:
-     - "5000:5000"
     # this image will created on running command 'docker-compose up'
     image: webapp-flask
+    ports:
+      - "5000:5000"
     build:
       # it is telling the Docker engine to only use files
       #in the current directory to build the image

@@ -8,8 +8,7 @@ def init_app():
     app = init_ser()
     """Construct core Flask application with embedded Dash flaskapp."""
     with app.app_context():
-        # Import parts of our core Flask flaskapp
-        # Import Dash application
+        from . import views
         from .dashapp import dashboard
         app = dashboard.init_dashboard(app)
         return app

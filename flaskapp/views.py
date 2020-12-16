@@ -1,11 +1,12 @@
 from flask import render_template, redirect, url_for
-import flaskapp.forms as forms
+from . import forms
 import sqlalchemy as db
 import pandas as pd
 import pickle
 from flask import current_app as app
 
-filename = "./model/RandomForest.pkl"
+
+filename = ".//flaskapp//model//RandomForest.pkl"
 model = pickle.load(open(filename, 'rb'))
 
 @app.route('/', methods=["GET", "POST"])

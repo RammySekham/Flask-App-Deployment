@@ -18,10 +18,12 @@ RUN pip install --upgrade pip --user
 
 # We copy the rest of the codebase into the image
 COPY ./flaskapp .
+COPY ./app.py .
 
 EXPOSE 5000
 ENV FLASK_APP=app.py
 ENV DATABASE=/data/master.db
+ENV MODEL=/model/RandomForest.pkl
 
-CMD ["flask", "run", "-h", "0.0.0.0"]
+CMD ["flask", "run", "--host", "0.0.0.0"]
 
